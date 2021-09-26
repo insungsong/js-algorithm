@@ -334,23 +334,23 @@
 
 //문제 풀이
 //결국: 배열에 들어온 값이 100이 될때까지만 더해야한다.
-function solution(arr) {
-  let answer = arr;
-  let sum = answer.reduce((result, arrItem) => result + arrItem, 0);
-  console.log("sum: ", sum);
-  for (let i = 0; i < 8; i++) {
-    for (let j = i + 1; j < 9; j++) {
-      if (sum - (answer[i] + answer[j]) === 100) {
-        console.log("answer[i]: ", answer[i]);
-        console.log("answer[j]: ", answer[j]);
-        answer.splice(j, 1);
-        answer.splice(i, 1);
-      }
-    }
-  }
+// function solution(arr) {
+//   let answer = arr;
+//   let sum = answer.reduce((result, arrItem) => result + arrItem, 0);
+//   console.log("sum: ", sum);
+//   for (let i = 0; i < 8; i++) {
+//     for (let j = i + 1; j < 9; j++) {
+//       if (sum - (answer[i] + answer[j]) === 100) {
+//         console.log("answer[i]: ", answer[i]);
+//         console.log("answer[j]: ", answer[j]);
+//         answer.splice(j, 1);
+//         answer.splice(i, 1);
+//       }
+//     }
+//   }
 
-  return answer;
-}
+//   return answer;
+// }
 
-let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
-console.log(solution(arr));
+// let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+// console.log(solution(arr));
